@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 #ifndef TRAFFIC_EDITOR_GRAPH_H
 #define TRAFFIC_EDITOR_GRAPH_H
@@ -22,17 +22,16 @@
 
 #include <yaml-cpp/yaml.h>
 
-class Graph
-{
+class Graph {
 public:
   Graph();
   ~Graph();
 
   int idx = 0;
   std::string name;
-  double default_lane_width = 1.0;
+  double default_lane_width = 0.1;
 
-  bool from_yaml(const int _idx, const YAML::Node& data);
+  bool from_yaml(const int _idx, const YAML::Node &data);
   YAML::Node to_yaml() const;
 };
 

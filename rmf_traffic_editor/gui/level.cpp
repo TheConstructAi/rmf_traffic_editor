@@ -644,7 +644,7 @@ void Level::draw_lane(
   const double len = std::sqrt(dx*dx + dy*dy);
 
   // see if there is a default width for this graph_idx
-  double graph_default_width = -1.0;
+  double graph_default_width = -0.1;
   for (const auto& graph : graphs)
   {
     if (graph.idx == graph_idx)
@@ -654,7 +654,7 @@ void Level::draw_lane(
     }
   }
 
-  double lane_width_meters = 1.0;
+  double lane_width_meters = 0.1;
   if (edge.get_width() > 0)
     lane_width_meters = edge.get_width();
   else if (graph_default_width > 0)
